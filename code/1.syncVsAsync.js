@@ -14,4 +14,14 @@ const dataAsync = fs.readFile('sample.txt', 'utf8', (err, data) => {
         console.log(data)
     }
 })
+
+const promis = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('promise resolved..')
+    },0)
+}).then(data => {console.log(data)})
+
+console.log(promis)
+
+
 console.log('programe instructions end...')
