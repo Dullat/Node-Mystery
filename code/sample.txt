@@ -1,1 +1,1 @@
-hi bro this is a simple file and its content
+This is a sample file
