@@ -1,0 +1,14 @@
+
+========================
+  SYSTEM INFORMATION
+========================
+Username      : dullat
+OS Type       : Linux
+Platform      : linux
+Release       : 6.15.9-arch1-1
+Uptime        : 517 minutes
+Total Memory  : 7.49 GB
+Free Memory   : 1.56 GB
+CPU Cores     : 12
+Temp Dir      : /tmp
+========================
