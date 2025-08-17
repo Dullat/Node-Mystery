@@ -26,3 +26,4 @@ server.listen(5000, () => {
 });
 
 require("./asyncPattern.js");
+require("./util_promisify.js");

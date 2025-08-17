@@ -1,5 +1,5 @@
 const { readFile } = require("fs");
-const { readFile: readFilePromises } = require("fs/promises");
+const { readFile: readFilePromises } = require("fs/promises"); // also require("fs").promises can be used
 const path = require("path");
 
 const pathToText = path.join(__dirname, "../1.osModule/sysinfo.txt");
@@ -21,6 +21,7 @@ getText(pathToText)
   .catch((err) => console.log(err));
 
 const start = async () => {
+  // this is better then above
   try {
     const data = await getText(pathToText);
     console.log(data);
