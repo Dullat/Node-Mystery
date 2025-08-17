@@ -1,1 +1,1 @@
-require("./6.syncAndAsyncLoopAdvance/index.js");
+require("./6.syncAndAsyncLoopAdvance/./index.js");
