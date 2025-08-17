@@ -16,6 +16,10 @@ const getText = (path) => {
   });
 };
 
+getText(pathToText)
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err));
+
 const start = async () => {
   try {
     const data = await getText(pathToText);
