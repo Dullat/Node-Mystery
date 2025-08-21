@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/24. HTTP headers.md",
-                "mode": "preview",
+                "file": "theory/25. Serving HTML.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/24. HTTP headers.md",
+                "file": "theory/25. Serving HTML.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "theory/24. HTTP headers.md",
+                "file": "theory/25. Serving HTML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "theory/24. HTTP headers.md"
+                "file": "theory/25. Serving HTML.md"
               }
             }
           }
@@ -148,14 +148,15 @@
   },
   "active": "dfe4608250e3888c",
   "lastOpenFiles": [
-    "express-course/index.html~",
     "express-course/app.js~",
+    "theory/24. HTTP headers.md",
+    "theory/25. Serving HTML.md",
+    "express-course/index.html~",
     "express-course/index.html",
     "theory/20. PATH.md",
     "theory/21. OS module.md",
     "theory/9. Sync vs Async.md",
     "theory/13. Processes, Thread and MultiThread.md",
-    "theory/24. HTTP headers.md",
     "theory/23. HTTP.md",
     "theory/22. FS.md",
     "theory/19. index.js With modules.md",
