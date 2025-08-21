@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/22. FS.md",
-                "mode": "source",
+                "file": "theory/20. PATH.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/22. FS.md",
+                "file": "theory/20. PATH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "theory/22. FS.md",
+                "file": "theory/20. PATH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "theory/22. FS.md"
+                "file": "theory/20. PATH.md"
               }
             }
           }
@@ -148,6 +148,11 @@
   },
   "active": "dfe4608250e3888c",
   "lastOpenFiles": [
+    "theory/21. OS module.md",
+    "theory/20. PATH.md",
+    "theory/9. Sync vs Async.md",
+    "theory/13. Processes, Thread and MultiThread.md",
+    "theory/24. HTTP headers.md",
     "theory/23. HTTP.md",
     "theory/22. FS.md",
     "theory/19. index.js With modules.md",
