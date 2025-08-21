@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/20. PATH.md",
+                "file": "theory/24. HTTP headers.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/20. PATH.md",
+                "file": "theory/24. HTTP headers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "theory/20. PATH.md",
+                "file": "theory/24. HTTP headers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "theory/20. PATH.md"
+                "file": "theory/24. HTTP headers.md"
               }
             }
           }
@@ -148,8 +148,11 @@
   },
   "active": "dfe4608250e3888c",
   "lastOpenFiles": [
-    "theory/21. OS module.md",
+    "express-course/index.html~",
+    "express-course/app.js~",
+    "express-course/index.html",
     "theory/20. PATH.md",
+    "theory/21. OS module.md",
     "theory/9. Sync vs Async.md",
     "theory/13. Processes, Thread and MultiThread.md",
     "theory/24. HTTP headers.md",
