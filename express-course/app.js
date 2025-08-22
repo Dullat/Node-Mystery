@@ -4,11 +4,12 @@ const { readFileSync } = require("fs");
 const { products } = require("./data.js");
 const logger = require("./logger.js");
 const authorize = require("./authorized.js");
+const morgan = require("morgan");
 const app = express();
 
 // req => middleware => res
 
-app.use([logger, authorize]);
+app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
   const method = req.method;
