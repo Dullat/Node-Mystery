@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "express-theory/1. Routing.md",
-                "mode": "source",
+                "file": "express-theory/2. Middleware.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "express-theory/1. Routing.md",
+                "file": "express-theory/2. Middleware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "express-theory/1. Routing.md",
+                "file": "express-theory/2. Middleware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "express-theory/1. Routing.md"
+                "file": "express-theory/2. Middleware.md"
               }
             }
           }
@@ -148,10 +148,15 @@
   },
   "active": "dfe4608250e3888c",
   "lastOpenFiles": [
+    "express-course/authorized.js~",
     "express-course/app.js~",
-    "express-course/final/06-basic-json.js~",
+    "express-course/authorized.js",
     "express-theory/0. Roadmap.md",
+    "express-theory/2. Middleware.md",
     "express-theory/1. Routing.md",
+    "express-course/logger.js~",
+    "express-course/logger.js",
+    "express-course/final/06-basic-json.js~",
     "express-course/public/styles.css",
     "express-course/public/logo.svg",
     "express-course/public/index.html",
@@ -159,10 +164,7 @@
     "express-course/public",
     "express-course/final/03-express-basics.js~",
     "theory/25. Serving HTML.md",
-    "express-theory",
     "theory/24. HTTP headers.md",
-    "express-course/index.html~",
-    "express-course/index.html",
     "theory/20. PATH.md",
     "theory/21. OS module.md",
     "theory/9. Sync vs Async.md",
