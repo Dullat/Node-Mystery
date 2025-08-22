@@ -36,6 +36,29 @@ app.get(`/api/products/:productID`, (req, res) => {
   res.json(singleProduct);
 });
 
+//  working with query
+app.get("/api/v1/query", (req, res) => {
+  const { search, limit } = req.query;
+  let sortedProducts = [...products];
+
+  if (search) {
+    sortedProducts = sortedProducts.filter((product) => {
+      return product.name.startsWith(search);
+    });
+  }
+
+  if (limit) {
+    sortedProducts = sortedProducts.slice(0, Number(limit));
+  }
+
+  if (sortedProducts.length < 1) {
+    // res.status(200).send("No products matched your search query");
+    return res.status(200).json({ sucess: true, data: [] });
+  }
+
+  res.status(200).json(sortedProducts);
+});
+
 app.all("/*splat", (req, res) => {
   res.status(404).send("page not found");
 });
