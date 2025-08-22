@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "express-theory/0. Roadmap.md",
-                "mode": "preview",
+                "file": "express-theory/1. Routing.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "express-theory/0. Roadmap.md",
+                "file": "express-theory/1. Routing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "express-theory/0. Roadmap.md",
+                "file": "express-theory/1. Routing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "express-theory/0. Roadmap.md"
+                "file": "express-theory/1. Routing.md"
               }
             }
           }
@@ -148,10 +148,16 @@
   },
   "active": "dfe4608250e3888c",
   "lastOpenFiles": [
-    "express-course/final/03-express-basics.js~",
-    "express-course/app.js~",
-    "theory/25. Serving HTML.md",
     "express-theory/0. Roadmap.md",
+    "express-theory/1. Routing.md",
+    "express-course/app.js~",
+    "express-course/public/styles.css",
+    "express-course/public/logo.svg",
+    "express-course/public/index.html",
+    "express-course/public/browser-app.js",
+    "express-course/public",
+    "express-course/final/03-express-basics.js~",
+    "theory/25. Serving HTML.md",
     "express-theory",
     "theory/24. HTTP headers.md",
     "express-course/index.html~",
