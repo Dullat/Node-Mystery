@@ -1,34 +1,20 @@
-const http = require("http");
-const fs = require("fs");
+const express = require("express");
+const { readFileSync } = require("fs");
 
-// get all files
-const homePage = fs.readFileSync("./navbar-app/index.html");
-const styles = fs.readFileSync("./navbar-app/styles.css");
+const app = express();
 
-const server = http.createServer((req, res) => {
-  console.log(req.url);
-  if (req.url === "/") {
-    res.writeHead(200, {
-      "Content-Type": "text/html",
-    });
-    res.write(homePage);
-    res.end();
-  } else if (req.url === "/about") {
-    res.writeHead(200, {
-      "Content-Type": "text/html",
-    });
-    res.write("<h1>about page</h1>");
-    res.end();
-  } else if (req.url === "/styles.css") {
-    res.writeHead(200, { "Content-Type": "text/css" });
-    res.write(styles);
-    res.end();
-  } else {
-    res.writeHead(404);
-    res.end();
-  }
+app.get("/", (req, res) => {
+  res.send("Home Page");
 });
 
-server.listen(5000, () => {
-  console.log("runing on 5000");
+app.get("/about", (req, res) => {
+  res.send("blob");
+});
+
+app.all("/*splat", (req, res) => {
+  res.status(404).send("Page not found");
+});
+
+app.listen(5000, () => {
+  console.log("server is listening on 5000");
 });

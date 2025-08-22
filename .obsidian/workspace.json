@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "theory/25. Serving HTML.md",
-                "mode": "source",
+                "file": "express-theory/0. Roadmap.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "6b51aee8976dab89",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "theory/25. Serving HTML.md",
+                "file": "express-theory/0. Roadmap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "theory/25. Serving HTML.md",
+                "file": "express-theory/0. Roadmap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "theory/25. Serving HTML.md"
+                "file": "express-theory/0. Roadmap.md"
               }
             }
           }
@@ -148,9 +148,12 @@
   },
   "active": "dfe4608250e3888c",
   "lastOpenFiles": [
+    "express-course/final/03-express-basics.js~",
     "express-course/app.js~",
-    "theory/24. HTTP headers.md",
     "theory/25. Serving HTML.md",
+    "express-theory/0. Roadmap.md",
+    "express-theory",
+    "theory/24. HTTP headers.md",
     "express-course/index.html~",
     "express-course/index.html",
     "theory/20. PATH.md",
