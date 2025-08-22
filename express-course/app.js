@@ -1,33 +1,14 @@
 const express = require("express");
-const path = require("path");
-const { readFileSync } = require("fs");
-const { products } = require("./data.js");
-const logger = require("./logger.js");
-const authorize = require("./authorized.js");
-const morgan = require("morgan");
 const app = express();
+let { people } = require("./data.js");
 
-// req => middleware => res
+app.use(express.static("./methods-public"));
 
-app.use(morgan("dev"));
-
-app.get("/", (req, res) => {
-  const method = req.method;
-  const url = req.url;
-  const time = new Date().getFullYear();
-
-  console.log(method, url, time);
-
-  res.send("home");
+app.get("/api/people", (req, res) => {
+  res.status(200).json({ sucess: true, data: people });
 });
 
-app.get("/about", (req, res) => {
-  res.send("about");
-});
-
-app.get("/api", (req, res) => {
-  res.send("apiiii...........");
-});
+app.post("/login", (req, res) => {});
 
 app.listen(5000, () => {
   console.log("server is listening on 5000");
