@@ -1,6 +1,7 @@
 const Task = require('../models/task');
 const mongoose = require('mongoose');
 const asyncWrapper = require('../middleware/asyncWrapper')
+const {createCustomError} = require('../errors/customError')
 
 const getAllTasks = asyncWrapper(async (req, res) => {
     const tasks = await Task.find();
@@ -12,7 +13,7 @@ const createTask = asyncWrapper(async (req, res) => {
     res.status(201).json({ success: true, task });
 })
 
-const getTask = asyncWrapper(async (req, res) => {
+const getTask = asyncWrapper(async (req, res, next) => {
     const { id } = req.params;
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -20,24 +21,24 @@ const getTask = asyncWrapper(async (req, res) => {
     }
     const task = await Task.findById(id);
     if (!task) {
-        return res.status(404).json({ msg: 'No task found with this ID' });
+        return next(createCustomError("No task Found with this ID", 404))
     }
     res.status(200).json({ success: true, task });
 })
 
-const updateTask = asyncWrapper(async (req, res) => {
+const updateTask = asyncWrapper(async (req, res, next) => {
     const { id } = req.params;
 
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(400).json({ msg: 'Invalid task ID format' });
-    }
+    
     const task = await Task.findByIdAndUpdate(id, req.body, {
         new: true,
         runValidators: true
     });
 
     if (!task) {
-        return res.status(404).json({ msg: 'No task found to update' });
+        const error = new Error('No task with this ID...')
+        error.status = 404
+        return next(error)
     }
 
     res.status(200).json({ success: true, task });
