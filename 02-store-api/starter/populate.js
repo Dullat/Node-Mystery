@@ -15,8 +15,10 @@ const start = async() => {
        await connectDB(process.env.MONGO_URI)
        await createMultiple()
        console.log('success!!!')
+       process.exit(0)
     } catch (error) {
        console.log(error) 
+       process.exit(1)
     }
 }
 
