@@ -1,0 +1,23 @@
+require('dotenv').config()
+
+const connectDB = require('./db/connect')
+const Product = require("./models/product")
+const JsonProducts = require('./products.json')
+
+const createMultiple = async () => {
+    await Product.deleteMany()
+    await Product.create(JsonProducts)
+}
+
+
+const start = async() => {
+    try {
+       await connectDB(process.env.MONGO_URI)
+       await createMultiple()
+       console.log('success!!!')
+    } catch (error) {
+       console.log(error) 
+    }
+}
+
+start()

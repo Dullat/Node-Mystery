@@ -1,3 +1,3 @@
-const notFound = (req, res) => res.status(404).send('Route does not exist')
+const notFound = (req, res, next) => res.status(404).json({msg: "no route"})
 
 module.exports = notFound

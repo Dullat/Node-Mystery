@@ -5,8 +5,9 @@ const connectDB = require('./db/connect.js')
 
 const productsRouter = require('./routes/products.js')
 
-const notFoundMiddleware = require("./middleware/error-handler.js");
-const errorMiddleware = require("./middleware/not-found.js");
+const errorMiddleware = require("./middleware/error-handler.js");
+const notFound = require("./middleware/not-found.js");
+
 
 app.use(express.json());
 
@@ -18,7 +19,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1/products", productsRouter)
 
-app.use(notFoundMiddleware);
+app.use(notFound)
 app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 3000;
