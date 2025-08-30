@@ -3,20 +3,37 @@ const { createCustomError } = require("../errors/customError");
 
 const getAllProductsStatic = async (req, res, next) => {
   const search = req.query.name;
-  const products = await Product.find({})
-    .sort("-name price")
-    .select("name")
+  const products = await Product.find({ price: { $gt: 30, $lt: 60 } })
+    .sort("price")
+    .select("name price")
+    .skip(2)
     .limit(10);
-  res.status(200).json(products);
+  res.status(200).json({ products, nbHits: products.length });
 };
 const getAllProducts = async (req, res, next) => {
-  const { featured, company, name, sort, fields } = req.query;
+  const { featured, company, name, sort, fields, numericFilters } = req.query;
 
   const queryObject = {
     ...(featured === "true" || featured === "false" ? { featured } : {}),
     ...(company && { company }),
     ...(name && { name: { $regex: name, $options: "i" } }),
   };
+
+  if (numericFilters) {
+    const operatorMap = {
+      ">": "$gt",
+      "<": "$lt",
+      "=": "$eq",
+      ">=": "$gte",
+      "<=": "$lte",
+    };
+    const regEx = /\b(<|>|>=|<=|=)\b/g;
+    let filters = numericFilters.replace(
+      regEx,
+      (match) => `-${operatorMap[match]}-`,
+    );
+    console.log(filters);
+  }
 
   console.log(req.query);
   let result = Product.find(queryObject);
