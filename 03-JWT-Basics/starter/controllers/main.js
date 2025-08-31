@@ -17,10 +17,12 @@ const login = async (req, res) => {
   res.status(200).json({ msg: "hello John", token });
 };
 
-const dashboard = async (req, res) => {
+const dashboard = async (req, res, next) => {
   console.log(req.headers.authorization);
   const luckyNumber = Math.floor(Math.random() * 100);
-  res.status(200).json({ msg: "hello john", secret: luckyNumber });
+  res
+    .status(200)
+    .json({ msg: `Hello ${req.user.username}`, secret: luckyNumber });
 };
 
 module.exports = { login, dashboard };
