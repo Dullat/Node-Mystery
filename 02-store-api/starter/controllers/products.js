@@ -33,9 +33,16 @@ const getAllProducts = async (req, res, next) => {
       (match) => `-${operatorMap[match]}-`,
     );
     console.log(filters);
+    const options = ["price", "rating"];
+    filters = filters.split(",").forEach((item) => {
+      const [field, operator, value] = item.split("-");
+      if (options.includes(field)) {
+        queryObject[field] = { [operator]: Number(value) };
+      }
+    });
   }
 
-  console.log(req.query);
+  console.log(queryObject);
   let result = Product.find(queryObject);
   if (sort) {
     const sortList = sort.split(",").join(" ");
@@ -62,4 +69,3 @@ module.exports = {
   getAllProducts,
   getAllProductsStatic,
 };
-
